@@ -8,9 +8,7 @@ coverage/
 /build
 
 # dev tools
-/.imdone
 /.vscode
-.flowconfig
 .tern-project
 
 # misc

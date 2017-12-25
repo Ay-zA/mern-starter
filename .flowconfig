@@ -1,0 +1,12 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper='^~' -> '<PROJECT_ROOT>'
+module.name_mapper='^@' -> '<PROJECT_ROOT>/app/server'
+module.name_mapper='^-' -> '<PROJECT_ROOT>/app/client'
