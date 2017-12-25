@@ -1,0 +1,29 @@
+@import 'variables';
+
+.app-header {
+  background: $accent;
+  color: $text-white;
+  padding: 10px;
+}
+
+.app-header__title {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.app-header__nav {
+  text-align: center;
+  list-style: none;
+}
+
+.app-header__nav-item {
+  display: inline;
+
+  a {
+    padding: 10px;
+
+    &.active {
+      background-color: $accent-darken;
+    }
+  }
+}

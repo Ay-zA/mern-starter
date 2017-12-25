@@ -1,0 +1,25 @@
+{
+  "presets": ["env", "flow", "stage-0", "react"],
+  "retainLines": true,
+  "plugins": [
+    "react-hot-loader/babel",
+    "babel-plugin-add-module-exports",
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "~": "./",
+          "@": "./app/server",
+          "-": "./app/client"
+        }
+      }
+    ],
+    [
+      "transform-react-remove-prop-types",
+      {
+        "ignoreFilenames": ["node_modules"]
+      }
+    ]
+  ]
+}
