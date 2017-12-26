@@ -1,16 +1,22 @@
 import User from './user.model';
 
-export async function signUp(req, res, next) {
+export const getUsers = async (req, res, next) => {
   try {
-    const user = await User.create(req.body);
-    return res.status(201).json(user);
-  } catch (e) {
-    res.status(500);
-    return next(e);
-  }
-}
+    const users = await User.list();
 
-export function login(req, res, next) {
-  res.status(200).json(req.user);
-  return next();
-}
+    res.json(users);
+  } catch (e) {
+    next(e);
+  }
+};
+
+export const getUser = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const user = await User.get(id);
+
+    res.json(user);
+  } catch (e) {
+    next(e);
+  }
+};

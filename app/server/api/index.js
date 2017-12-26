@@ -1,11 +1,12 @@
+// @flow
 import { Router } from 'express';
-import userRoutes from './entities/user/user.routes';
-import { projectRoutes } from './entities/project';
+import { jwtAuth } from '@/services/auth.service';
+import { userRoutes } from './entities/user';
+import { authRoutes } from './entities/auth';
 
-const apiRouter = new Router();
-// import { jwtAuth } from '@/services/auth.service';
+const apiRouter = Router();
 
+apiRouter.use('/auth', authRoutes);
 apiRouter.use('/users', userRoutes);
-apiRouter.use('/projects', projectRoutes);
 
 export default apiRouter;

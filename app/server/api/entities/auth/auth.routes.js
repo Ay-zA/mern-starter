@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import celebrate from 'celebrate';
+import { celebrate } from 'celebrate';
 import { localAuth } from '@/services/auth.service';
 import authValidator from './auth.validator';
 import * as authController from './auth.controller';
 
-const authRoutes = new Router();
+const authRoutes = Router();
 
 authRoutes.post(
   '/login',
