@@ -4,8 +4,6 @@
   "description": "MERN Starter with Webpack HMR and GraphQL",
   "main": "index.js",
   "scripts": {
-    "preinstall": "rimraf ./node_modules",
-    "install": "yarn",
     "clean": "rimraf ./build",
     "lint": "eslint app --ext .jsx,.js",
     "lint:server": "eslint app/server --ext .js,.jsx",
